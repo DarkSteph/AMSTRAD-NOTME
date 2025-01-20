@@ -11,7 +11,7 @@ rm -rf notme_$date.sna; echo $?
 echo $date
 echo "1 -> .dsk, 2 -> .sna"
 read name
-/Users/7511036v/Downloads/RASM/rasm.macos /Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/notme_compress.asm -void -sp -eo -sv -sl -v -o /Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/bin/notme
+/Users/7511036v/Downloads/RASM/rasm.macos /Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/notme_compress.asm -void -sp -eo -sv -sl -v -o /Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/bin/notme_$date
 
 idsk "notme.dsk" -i "/Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/Data/notmescr.scr" -t 1
 idsk "notme.dsk" -i "/Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME//notme.bas" -t 0
