@@ -37,7 +37,7 @@ COLONNE1CHR         EQU 0Bh
 ; SNASET GA_ROMCFG,%1100 ; pour être sûr de démarrer dans la mémoire, on les désactive du snapshot au cas où
 ; BANKSET 0 ; assembler dans les premiers 64K
 ; RUN #100 ; pour dire à quelle adresse le snapshot doit démarrer
-;BUILDCPR
+; BUILDCPR
 
 
 ORG 4000h
