@@ -205,12 +205,27 @@ main:                       ; Boucle principale du jeu
                 LD HL, 0x0205           ; Set de la position en XY de la phrase                                                           
                 CALL LOCATECURSOR       ; LOCATE du curseur                                                      
                 LD HL, backSpace       ; Load Adress sentence "Entrez votre pseudo, fin avec ENTER"
-                CALL BOUCLE   
+                CALL BOUCLE
                 LD IX, player1          ; Load adress of player name
                 LD HL, 0x020A           ; Set de la position en XY du nom du player 1                                                          
                 CALL LOCATECURSOR       ; LOCATE du curseur  
                 LD HL, player1Temp
                 CALL BOUCLE
+                ; Détection si nom player déjà nommer
+                LD A, (reboot)
+                OR A
+                JR Z, suiteNamePlayerDetection
+                ; Si non
+                ; Affichage du nom precedement nommé
+                LD A, 0x20
+                CALL PRINTCHR
+                LD A, 0x28
+                CALL PRINTCHR
+                LD HL, player1
+                CALL BOUCLE
+                LD A, 0x29
+                CALL PRINTCHR
+                suiteNamePlayerDetection:
                 LD HL, deuxpoints       ; Load Adress sentence "Entrez votre pseudo, fin avec ENTER"
                 CALL BOUCLE   
                 preDebugCHR:
@@ -228,12 +243,18 @@ main:                       ; Boucle principale du jeu
                     INC IX                  ; Ajout 1 à l'adresse (pour passer à la lettre du nom suivante)
                     CALL PRINTCHR           ; Affichage du caratère
                     LD DE, SON1             ; Mettre dans DE l'adresse du SON1
-                    CALL PlaySound          ; Jouer le son
+                    CALL PlaySound          ; Jouer le sonore
+                    LD A, 1
+                    LD (newNamePlayer), A
                     JR preDebugCHR
                     goToNamePlayer2:
                         LD A, 1
                         CALL USEPEN
+                        ;LD A, (newNamePlayer)
+                        ;OR A
+                        ;JR Z, esquive0Player1
                         LD (IX), 0
+                        ;esquive0Player1:
                         ;Test si 1 joueur
                         LD A, (playersNumber)
                         CP 0x31
@@ -244,6 +265,21 @@ main:                       ; Boucle principale du jeu
                         CALL LOCATECURSOR       ; LOCATE du curseur  
                         LD HL, player2Temp
                         CALL BOUCLE
+                        ; Détection si nom player déjà nommer
+                        LD A, (reboot)
+                        OR A
+                        JR Z, suiteNamePlayerDetection2
+                        ; Si non
+                        ; Affichage du nom precedement nommé
+                        LD A, 0x20
+                        CALL PRINTCHR
+                        LD A, 0x28
+                        CALL PRINTCHR
+                        LD HL, player2
+                        CALL BOUCLE
+                        LD A, 0x29
+                        CALL PRINTCHR
+                        suiteNamePlayerDetection2:
                         LD HL, deuxpoints       ; Load Adress sentence "Entrez votre pseudo, fin avec ENTER"
                         CALL BOUCLE
                         LD IX, player2
@@ -270,7 +306,7 @@ main:                       ; Boucle principale du jeu
         JP Z, quiRandomLoop         ; Si Oui saut vers quiRandomLoop
         LD (playerWhoBeguin), A     ; Si Non playerWhoBeguin = 0x31
         JP wordChoose               ; Si Non pas de tirage au sort
-        quiRandomLoop:          ; Choose number for determine word to play
+        quiRandomLoop:              ; Choose number for determine word to play
             CALL random                 ; 
             OR A                        ;
             JR Z, quiRandomLoop         ; 
@@ -648,6 +684,7 @@ histoire:
     h50:    db "telle est la vie en 1473.",0
 myRandomNumber:         db 0x0
 reboot                  db 0x0
+newNamePlayer           db 0x0
 playersNumber:          db 0x0
 playerWhoBeguin         db 0x1
 player1Score:           db 0x36
