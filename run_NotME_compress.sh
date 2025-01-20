@@ -9,17 +9,17 @@ rm -rf notme.sna; echo $?
 
 echo "1 -> .dsk, 2 -> .sna"
 read name
-/Users/7511036v/Downloads/RASM/rasm.macos /Users/7511036V/Documents/Perso/ASM/DEV/NotME-AMSTRAD/notme_compress.asm -void -sp -eo -sv -sl -v -o /Users/7511036V/Documents/Perso/ASM/DEV/NotME-AMSTRAD/bin/notme
+/Users/7511036v/Downloads/RASM/rasm.macos /Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/notme_compress.asm -void -sp -eo -sv -sl -v -o /Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/bin/notme
 
-idsk "notme.dsk" -i "/Users/7511036V/Documents/Perso/ASM/DEV/NotME-AMSTRAD/Data/notmescr.scr" -t 1
-idsk "notme.dsk" -i "/Users/7511036V/Documents/Perso/ASM/DEV/NotME-AMSTRAD//notme.bas" -t 0
+idsk "notme.dsk" -i "/Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/Data/notmescr.scr" -t 1
+idsk "notme.dsk" -i "/Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME//notme.bas" -t 0
 
 if [ "$name" = "1" ]; then
-    cp -v "/Users/7511036V/Documents/Perso/ASM/DEV/NotME-AMSTRAD/bin/notme.dsk" "/Applications/AceDL.app/Contents/MacOS/media/dsk"
+    cp -v "/Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/bin/notme.dsk" "/Applications/AceDL.app/Contents/MacOS/media/dsk"
 elif [ "$name" = "2" ]; then
-    cp -v "/Users/7511036V/Documents/Perso/ASM/DEV/NotME-AMSTRAD/bin/notme.sna" "/Applications/AceDL.app/Contents/MacOS/media/snap"
+    cp -v "/Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/bin/notme.sna" "/Applications/AceDL.app/Contents/MacOS/media/snap"
 else
-    cp -v "/Users/7511036V/Documents/Perso/ASM/DEV/NotME-AMSTRAD/bin/notme.dsk" "/Applications/AceDL.app/Contents/MacOS/media/dsk"
+    cp -v "/Users/7511036V/Documents/Perso/ASM/DEV/AMSTRAD-NOTME/bin/notme.dsk" "/Applications/AceDL.app/Contents/MacOS/media/dsk"
 fi
 
 read -p "$*"
