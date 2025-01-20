@@ -37,7 +37,7 @@ COLONNE1CHR         EQU 0Bh
 ; SNASET GA_ROMCFG,%1100 ; pour être sûr de démarrer dans la mémoire, on les désactive du snapshot au cas où
 ; BANKSET 0 ; assembler dans les premiers 64K
 ; RUN #100 ; pour dire à quelle adresse le snapshot doit démarrer
-BUILDCPR
+;BUILDCPR
 
 
 ORG 4000h
@@ -199,7 +199,7 @@ main:                       ; Boucle principale du jeu
                 CALL LOCATECURSOR       ; LOCATE du curseur                                                      
                 LD HL, namePlayer       ; Load Adress sentence "Entrez votre pseudo, fin avec ENTER"
                 CALL BOUCLE   
-                LD HL, ReturnCHR          ; Affichage du sprite sur le joueur 1
+                LD HL, ReturnCHR          ; Affichage du sprite "Return"
                 LD DE, ADDRETURNCHR
                 CALL boucleAff
                 LD HL, 0x0205           ; Set de la position en XY de la phrase                                                           
@@ -216,12 +216,14 @@ main:                       ; Boucle principale du jeu
                 preDebugCHR:
                     LD A, 3
                     CALL USEPEN
-                    CALL AttenteTouche      ; Test if a key is pressed
-                    CP 0x7F                 ; Compare with 0
-                    CALL Z, DeleteCHR   ; If Key is 0, end player 1 and go to player 2
-                    JR Z, preDebugCHR
-                    CP 0x0D
-                    JR Z, goToNamePlayer2   ; Compare with Enter
+                    CALL AttenteTouche      ; Test de l'appuie d'une touche
+                    CP 0x7F                 ; Test touche "DEL"
+                    CALL Z, DeleteCHR       ; Si oui, exécution de la routine "DeleteCHR"
+                    ; Si non
+                    JR Z, preDebugCHR        
+                    CP 0x0D                 ; Test de la touche "ENTER"
+                    JR Z, goToNamePlayer2   ; Si oui execution de la routine "goToNamePlayer2"
+                    ; Si non
                     LD (IX), A              ; set The key to adress IX, Name player 1
                     INC IX
                     CALL PRINTCHR           ; Display CHR in screen (1 or 2) 
@@ -700,28 +702,28 @@ nbrPlayerStr:   db "Nombre de joueur(s) (1 ou 2):", 0
 quiVacommencerstr: db "Qui va commencer ?", 0
 tirageAuSort    db "Tirage au sort en cours ", 0
 help            db "L'ESPACE peut etre un caratere !", 0
-point          db  0x2E
+point           db  0x2E
 ;A=color mask, H = left column, L = upper line, D=Right column, E=bottom line
-background00:       db 0xF, 0x0, 0x0, 0x1, 0x19
-background01:       db 0xF, 0x0, 0x0, 0x2, 0xC
-background02:       db 0xF, 0x3, 0x1, 0xA, 0x1
-background03:       db 0xF, 0x3, 0x2, 0x1B, 0x2
-rope01:             db 0xFF, 0xA, 0x3, 0xA, 0x3
-rope02:             db 0xFF, 0x1A, 0x3, 0x1A, 0x3
-penduPlayer1Tete:   db 0, 0xF0, 0x09, 0x04, 0x0B, 0x06
-penduPlayer1Tronc:  db 0, 0xF0, 0xA, 0x5, 0xA, 0xB 
+background00:           db 0xF, 0x0, 0x0, 0x1, 0x19
+background01:           db 0xF, 0x0, 0x0, 0x2, 0xC
+background02:           db 0xF, 0x3, 0x1, 0xA, 0x1
+background03:           db 0xF, 0x3, 0x2, 0x1B, 0x2
+rope01:                 db 0xFF, 0xA, 0x3, 0xA, 0x3
+rope02:                 db 0xFF, 0x1A, 0x3, 0x1A, 0x3
+penduPlayer1Tete:       db 0, 0xF0, 0x09, 0x04, 0x0B, 0x06
+penduPlayer1Tronc:      db 0, 0xF0, 0xA, 0x5, 0xA, 0xB 
 penduPlayer1BrasGauche: db 0, 0xF0, 0x7, 0x8, 0x9, 0x8 
 enduPlayer1BrasDroite:  db 0, 0xF0, 0xB, 0x8, 0xD, 0x8 
-penduPlayerLeftLeg:     db  1, 0xF0, 0xA, 0xC, 0xA, 0xC
-penduPlayerRightLeg:    db  1, 0xF0, 0xA, 0xC, 0xA, 0xC
+penduPlayerLeftLeg:     db 1, 0xF0, 0xA, 0xC, 0xA, 0xC
+penduPlayerRightLeg:    db 1, 0xF0, 0xA, 0xC, 0xA, 0xC
 tokenMaskPlayer:        db 0x00, 0x5, 0x13, 0x5, 0x13
 tokenSprite:            db 0x6, 0x6, 0x6, 0x6, 0xF, 0xF, 0xF, 0xF, 0xF, 0xF, 0x7, 0xE, 0x3, 0xC, 0x1, 0x8
 CrossPlayer:            db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
-ReturnCHR:              DB 0x00, 0x06, 0x00, 0x06, 0x02, 0x06, 0x06, 0x06, 0x0F, 0x0E, 0x0F, 0x0E, 0x06, 0x00, 0x02, 0x00
+ReturnCHR:              DB 0x0, 0x6, 0x0, 0x6, 0x2, 0x6, 0x6, 0x6, 0xF, 0xE, 0xF, 0xE, 0x6, 0x0, 0x2, 0x0
 randData:               db 230
-debut_ligne     dw 0x0000
-fin_ligne       db 0x0
-ligne_courante  dw 0x0000
+debut_ligne             dw 0x0000
+fin_ligne               db 0x0
+ligne_courante          dw 0x0000
 SON:    DB 1 ;canal
         DB 2 ;env
         DB 3 ;ent
