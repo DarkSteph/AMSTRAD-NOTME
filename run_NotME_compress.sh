@@ -1,12 +1,13 @@
 #!/bin/sh
-cd ./bin
-rm -rf notme.bin; echo $?
-rm -rf notme.sym; echo $?
-rm -rf notme.dsk; echo $?
-rm -rf notme.sna; echo $?
-
-
 date=$(date '+%Y%m%d')
+cd ./bin
+rm -rf notme_$date.bin; echo $?
+rm -rf notme_$date.sym; echo $?
+rm -rf notme_$date.dsk; echo $?
+rm -rf notme_$date.sna; echo $?
+
+
+
 echo $date
 echo "1 -> .dsk, 2 -> .sna"
 read name

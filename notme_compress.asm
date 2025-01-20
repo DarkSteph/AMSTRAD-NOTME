@@ -224,11 +224,11 @@ main:                       ; Boucle principale du jeu
                     CP 0x0D                 ; Test de la touche "ENTER"
                     JR Z, goToNamePlayer2   ; Si oui execution de la routine "goToNamePlayer2"
                     ; Si non
-                    LD (IX), A              ; set The key to adress IX, Name player 1
-                    INC IX
-                    CALL PRINTCHR           ; Display CHR in screen (1 or 2) 
-                    LD DE, SON1
-                    CALL PlaySound          ; DE = Adresse du son
+                    LD (IX), A              ; On met dans l'adresse de IX la touche préssée
+                    INC IX                  ; Ajout 1 à l'adresse (pour passer à la lettre du nom suivante)
+                    CALL PRINTCHR           ; Affichage du caratère
+                    LD DE, SON1             ; Mettre dans DE l'adresse du SON1
+                    CALL PlaySound          ; Jouer le son
                     JR preDebugCHR
                     goToNamePlayer2:
                         LD A, 1
