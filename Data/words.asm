@@ -1,0 +1,243 @@
+db  "AFTER THE WAR", 0
+db  "AIRWOLF", 0
+db  "AMSTRAD", 0
+db  "BUGGY BOY", 0
+db  "BARBARIAN", 0
+db  "CABAL", 0
+db  "CAULDRON", 0
+db  "CLUEDO", 0
+db  "BACTRON", 0
+db  "BATMAN", 0
+db  "BIGFOOT", 0
+db  "BOMB JACK", 0
+db  "BOMB JACK 2", 0
+db  "BUBBLE GHOST", 0
+db  "BUGGY BOY", 0
+db  "CRACK DOWN", 0
+db  "CRAZY CARS", 0
+db  "CRAZY CARS 2", 0
+db  "CRAZY CARS 3", 0
+db  "CYBERNOID", 0
+db  "CYBERNOID 2", 0
+db  "DRAGON SPIRIT", 0
+db  "DUNGEON 2", 0
+db  "ELEVATOR ACTION", 0
+db  "ENDURO RACER", 0
+db  "EREBUS", 0
+db  "EXIT", 0
+db  "EXOLON", 0
+db  "EXPRESS RAIDER", 0
+db  "ELITE", 0
+db  "FENETRE", 0
+db  "FIREBIRD", 0
+db  "FIRELORD", 0
+db  "FORMULA ONE", 0
+db  "FRANKENSTEIN", 0
+db  "FRONTIERS", 0
+db  "FRUITY FRANCK", 0
+db  "GALIVAN", 0
+db  "GAME OVER", 0
+db  "GAUNTLET", 0
+db  "GAUNTLET 2", 0
+db  "HACKER", 0
+db  "HAMMERFIST", 0
+db  "HARD DRIVIN", 0
+db  "HARDBALL", 0
+db  "HARRIER ATTECK", 0
+db  "HATE", 0
+db  "HEAVY METAL", 0
+db  "HEROQUEST", 0
+db  "HOSTAGES", 0
+db  "HOTSHOT", 0
+db  "HURLEMENTS", 0
+db  "HUSTLER", 0
+db  "HYDRA", 0
+db  "HYDROFOOL", 0
+db  "IKARI WARRIOR", 0
+db  "IMAGINATION", 0
+db  "IMPOSSAMOLE", 0
+db  "INCANTATION", 0
+db  "INFERNAL HOUSE", 0
+db  "INFERNAL RUNNER", 0
+db  "INFILTRATOR", 0
+db  "IRON LORD", 0
+db  "IZNOGOUD", 0
+db  "JACK THE NIPPER", 0
+db  "JACKAL", 0
+db  "JAWS", 0
+db  "JET SET WILLY", 0
+db  "KICK OFF", 0
+db  "KLAX", 0
+db  "KOLOTOC", 0
+db  "KRAKOUT", 0
+db  "LAST NINJA", 0
+db  "LEGEND OF KAGE", 0
+db  "LEMMINGS", 0
+db  "LICENCE TO KILL", 0
+db  "LIGHT FORCE", 0
+db  "LODE RUNNER", 0
+db  "LORNA", 0
+db  "MACADAM BUPPER", 0
+db  "MAD MIX", 0
+db  "MAGIC SWORD", 0
+db  "MANDRAGORE", 0
+db  "MANIC MINER", 0
+db  "MARAUDER", 0
+db  "MARBLE MADNESS", 0
+db  "MARIO BROS", 0
+db  "MASK", 0
+db  "MATA HARI", 0
+db  "MIAMI VICE", 0
+db  "MISSION ELEVATOR", 0
+db  "MISSION JUPITER", 0
+db  "MLM 3D", 0
+db  "MOON BLASTER", 0
+db  "MOON BUGGY", 0
+db  "MOON CRESTA", 0
+db  "MOTORBIKE MADNESS", 0
+db  "MR FREEZE", 0
+db  "MR HELI", 0
+db  "MUTAN ZONE", 0
+db  "MOONWALKER", 0
+db  "MIGHTY S FIGHTER", 0
+db  "MYSTICAL", 0
+db  "MYTHOS", 0
+db  "NARC", 0
+db  "NAVY MOVES", 0
+db  "NAVY SEALS", 0
+db  "NEBULUS", 0
+db  "NECROMANCIEN", 0
+db  "NEMESIS", 0
+db  "NETHERWORLD", 0
+db  "NEW ZEALAND STORY", 0
+db  "NIGHT BREED", 0
+db  "NIGHT HUNTER", 0
+db  "NIGHT RAIDER", 0
+db  "NINJA COMMANDO", 0
+db  "NINJA MASSACRE", 0
+db  "NINJA SPIRIT", 0
+db  "NINJA WARRIORS", 0
+db  "NO EXIT", 0
+db  "NOCTURNE", 0
+db  "NORTH AND SOUTH", 0
+db  "NORTH STAR", 0
+db  "NOT ME", 0
+db  "OBLITERATOR", 0
+db  "OCTOPLEX", 0
+db  "OH MUMMY", 0
+db  "OIL PANIC", 0
+db  "OIL MANIA", 0
+db  "OLYMPIAD", 0
+db  "OPERATION WOLF", 0
+db  "OUTRUN", 0
+db  "OUTRUN EUROPA", 0
+db  "OUTLAW", 0
+db  "OVERLANDER", 0
+db  "PAC LAND", 0
+db  "PAC MANIA", 0
+db  "PALITRON", 0
+db  "PAPERBOY", 0
+db  "PARIS DAKAR", 0
+db  "POSTMAN PAT", 0
+db  "PETER PAN", 0
+db  "PHANTIS", 0
+db  "PICTIONARY", 0
+db  "PINBALL MAGIC", 0
+db  "PING PONG", 0
+db  "PINK PANTHER", 0
+db  "PIPE MANIA", 0
+db  "PLANET OF DEATH", 0
+db  "PLASMATRON", 0
+db  "PLATOON", 0
+db  "PREDATOR", 0
+db  "POPEYE", 0
+db  "POWER DRIFT", 0
+db  "PREHISTORIK", 0
+db  "PRINCE OF PERSIA", 0
+db  "PROFANATION", 0
+db  "PROHIBITION", 0
+db  "PSYCHO SOLDIER", 0
+db  "PYJAMARAMA", 0
+db  "PUZZNIC", 0
+db  "QUARTET", 0
+db  "R TYPE", 0
+db  "RADIUS", 0
+db  "RADZONE", 0
+db  "RAINBOW ISLAND", 0
+db  "RAMBO 3", 0
+db  "RAMPAGE", 0
+db  "RASTAN", 0
+db  "RASTER RUNNER", 0
+db  "REBEL PLANET", 0
+db  "RED MOON", 0
+db  "RENAGADE", 0
+db  "RICK DANGEROUS", 0
+db  "ROBIN OF SHERWOOD", 0
+db  "ROBOT ATTACK", 0
+db  "ROBOZONE", 0
+db  "RODEO", 0
+db  "ROGUE TROOPER", 0
+db  "ROLAND IN SPACE", 0
+db  "ROLAND IN SPACE", 0
+db  "ROLAND ON THE RUN", 0
+db  "ROLLING THUNDER", 0
+db  "ROOKIE", 0
+db  "RUNESTONE", 0
+db  "RYGAR", 0
+db  "ROBOCOP", 0
+db  "SABOTAGE", 0
+db  "SABRINA", 0
+db  "SAINT DRAGON", 0
+db  "SALAMANDER", 0
+db  "SABOTEUR", 0
+db  "SABOTEUR 2", 0
+db  "SAPIENS", 0
+db  "SATAN", 0
+db  "SAVAGE", 0
+db  "SCOOBY DOO", 0
+db  "SHADOW DANCER", 0
+db  "SHADOW WARRIORS", 0
+db  "SHINOBI", 0
+db  "SHORT CIRCUIT", 0
+db  "SILKWORM", 0
+
+db  "SHANGAI", 0
+db  "SIMCITY", 0
+db  "SKATE OR DIE", 0
+db  "SKATEBALL", 0
+db  "SKWEEK", 0
+db  "SKY HUNTER", 0
+db  "SLAP FIGHT", 0
+db  "SNOOKER", 0
+db  "SOLOMON S KEY", 0
+db  "SNOWBALL", 0 
+db  "SORCERER", 0
+db  "SORCERY", 0 
+db  "SPACE CRUSADE", 0
+db  "SPACE HARRIER", 0
+db  "SPY HUNTER", 0
+db  "SRAM", 0
+db  "SRAM 2", 0
+db  "STAR WARS", 0
+db  "STARBOY", 0
+db  "STORMLORD", 0
+db  "STREET FIGHTER", 0
+db  "STUN RUNNERS", 0
+db  "STUNT CAR RACER"
+db  "STRIDER", 0
+db  "STRIDER 2", 0
+db  "STRIP POKER", 0
+db  "SUPER CARS", 0
+db  "SUPER CAULDRON", 0
+db  "SUPER HANG ON", 0
+db  "TANK", 0
+db  "THUNDER BLADE", 0
+db  "TITAN", 0   
+db  "TOOBIN", 0    
+db  "TOTAL RECALL", 0 
+db  "TROLL", 0
+db  "TURBO OUTRUN", 0
+db  "TURRICAN", 0
+db  "VENDETTA", 0
+db  "VENOM", 0  
+
